@@ -51,7 +51,7 @@ class PayboxService
      * @param $data
      * @throws \Exception
      */
-    public function paymentInfo(array $data): static
+    public function paymentInfo(array $data)
     {
         $validator = Validator::make($data, ((new PayboxStatusPaymentRequest())->rules()));
         if ($validator->fails())
